@@ -1,1 +1,1 @@
-A JavaScript documentation page covering basics, syntax, and essential concepts. Built with a clean layout, sidebar navigation, and responsive design. Explains topics in simple language with code examples. Developed as a FreeCodeCamp project to practice technical writing and web structure.
+A JavaScript documentation page covering basics, syntax, and essential concepts. Built with a clean layout, sidebar navigation, and responsive design. Explains topics in simple language with code examples. Developed as a freeCodeCamp project to practice technical writing and web structure.
