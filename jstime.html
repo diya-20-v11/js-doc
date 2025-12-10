@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="JavaScript is a versatile, high-level programming language primarily known for making web pages interactive. It allows developers to implement complex features on websites, such as dynamic content updates, animations, and user interface responsiveness.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Learn JavaScript Basics</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    
+    <link rel="stylesheet" href="jstime.css">
+    
+    <link rel="shortcut icon"
+    href="https://cdn.iconscout.com/icon/free/png-512/free-javascript-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-225993.png?f=webp&w=256"   
+    type="image/x-icon">
+</head>
+
+<body>
+  <!-- <header></header> -->
+
+<nav id="navbar">
+  <header class="nav-title">JS Documentation</header>
+  <button id="menu-toggle">☰ Menu</button>
+  <ul id="menu-list">
+    <li class="lili"><a href="#Introduction" class="nav-link">Introduction</a></li>
+    <li class="lili"><a href="#Linking_JavaScript_to_HTML" class="nav-link">Linking JavaScript to HTML</a></li>
+    <li class="lili"><a href="#When_to_use_which_method?" class="nav-link">When to use which method?</a></li>
+    <li class="lili"><a href="#JavaScript_comments" class="nav-link">JavaScript comments</a></li>
+    <li class="lili"><a href="#alert_and_console.log" class="nav-link">alert and console.log</a></li>
+    <li class="lili"><a href="#Variables" class="nav-link">Variables</a></li>
+    <li class="lili"><a href="#Rules_for_Variable_names" class="nav-link">Rules for Variable names</a></li>
+    <li class="lili"><a href="#Declaring_a_variable" class="nav-link">Declaring a variable</a></li>
+    <li class="lili"><a href="#Determining_variable_type" class="nav-link">Determining variable type</a></li>
+    <li class="lili"><a href="#JavaScript_Data_types" class="nav-link">JavaScript Data types</a></li>
+    <li class="lili"><a href="#Primitive_Data_types" class="nav-link">Primitive Data types</a></li>
+    <li class="lili"><a href="#Non_Primitive_Data_types" class="nav-link">Non Primitive Data types</a></li>
+  </ul>
+</nav>
+         <main id="main-doc">
+
+        <section class="one main-section" id="Introduction">
+            <header>
+                <h1>Introduction</h1>
+            </header>
+            <p>JavaScript is the programming language of the web. It is the programming language that make the website
+                interactive. It can update and change both HTML and CSS. It can calculate, manipulate and validate the
+                data.</p>
+            <p>JavaScript runs in the browser through an engine that reads and executes the code. </p>
+            <p> When you open a webpage, the browser reads the HTML, applies the CSS, and then runs the JavaScript line
+                by line using a built-in engine (like V8 in Chrome). This is how your code becomes actions on screen.
+            </p>
+            <h4>Analogy :</h4>
+            <p class="imp">HTML builds the structure of a website, CSS makes it look good, and JavaScript adds life to
+                it. </p>
+            <p>Code example is as follows :</p>
+            <pre class="vanilla"> <code>
+     &lt;script&gt; 
+     alert("Hello ! Welcome to my page"); 
+     &lt;/script&gt;
+            </code></pre>
+            <p>JavaScript is used in both frontend and backend development.
+                When you use JavaScript for back-end, you will have to use Node.js. The script file or
+                <code>&lt;script&gt;</code> tag which is in the HTML document will be shown in the browser.
+            </p>
+        </section>           
+
+
+        <section class="two main-section" id="Linking_JavaScript_to_HTML">
+            <header><h1>Linking JavaScript to HTML</h1></header>
+            <p>There are three ways to add JavaScript to an HTML document. They are as follows: </p>
+            <ol class="types">
+                <li class="type1">Inline JavaScript
+                    <p>You can add JavaScript directly inside an HTML element using event attributes like <code>onclick, onmouseover</code>, etc.</p>
+                    <pre><code>
+     &lt;button onclick="alert('Hello!')">Click me&lt;/button&gt;
+                    </code></pre>
+                </li>
+                <li class="type2">Internal JavaScript
+                    <p>JavaScriptis written inside <code>&lt;script&gt;</code> tags, usually inside the <code>&lt;head&gt;</code> or just before the closing </body> tag.
+</p> 
+<pre class="vanilla"> <code>
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+  &lt;head&gt;
+   &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;script&gt;
+      // Your JavaScript code here
+      console.log("Script runs just before the body closes");
+    &lt;/script&gt;
+   &lt;/body&gt;
+ &lt;/html&gt;
+
+</code></pre>
+                </li>
+                <li class="type3">External JavaScript
+                    <p>You link a separate .js file in your HTML with a <code>&lt;script&gt;</code> tag's <code>src</code> attribute.</p>
+                    <pre class="vanilla"> <code>
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+   &lt;head&gt;
+     &lt;title&gt;My Page&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+     &lt;h1&gt;Hello World&lt;/h1&gt;
+     &lt;script src="script.js"&gt; &lt;/script&gt; 
+   &lt;/body&gt;
+ &lt;/html&gt;
+
+</code></pre> <p>Here, script.js is your JavaScript file containing all your code.
+</p>
+                </li>
+            </ol>
+            
+        </section>
+           
+
+        <section class="three main-section" id="When_to_use_which_method?">
+            <header><h1>When to use which method?</h1></header>
+            <table>
+                    <thead>
+                        <th>Situation</th>
+                        <th>Method</th>
+                    </thead>
+                    <tbody>
+                    <tr >
+                        <td>Quick, tiny JS for a specific element</td>
+                        <td>Inline JavaScript</td>
+                    </tr>
+                    <tr >
+                        <td>Small script specific to one page</td>
+                        <td>Internal JavaScript</td>
+                    </tr>
+                    <tr class="not">
+                        <td>Medium to large apps, reusable or shared code</td>
+                        <td>External JavaScript(js file)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <code></code>
+        </section>
+
+ <section class="four main-section" id="JavaScript_comments">
+    <header><h1>JavaScript comments</h1></header>
+    <p>There are two ways to write comments in JavaScript : 
+ Using <code>//</code> will tell JavaScript to ignore the remainder of the text on the current line.</p>
+ <pre class="vanilla"><code>
+  // This is an in-line comment
+ </code></pre>
+ <p class="vanilla">You can make multi-line comment with beginning <code>/*</code> with and ending with <code> */ </code> . </p>
+ <pre><code>
+  /* This is
+   a multi-line
+    comment */
+ </code></pre>
+ </section>
+
+        <section class="five main-section" id="alert_and_console.log">
+            <header><h1>alert and console.log</h1></header>
+            <h3>Using alert</h3>
+<pre class="vanilla"><code>
+  &lt;script&gt;
+        alert("hello world");
+  &lt;/script&gt;
+
+</code></pre><p>A dialog box saying hello world will appear.</p>
+<h3>Using console.log</h3>
+<p>For the output, press (CTRL + SHIFT + I) Inspect , then click on Console, you will see the text that you had written in <code>console.log</code>.</p>
+<pre class="vanilla"><code>
+ console.log("Life is short. Smile while you still have teeth!");
+
+</code></pre>
+        </section>
+
+
+        <section class="six main-section" id="Variables">
+           <header> <h1>Variables</h1></header>
+            <p>Variables are used to store data in a program. They act like containers that hold values. You can give them names to identify what they store. Variables can be changed or updated later. They help you reuse and manage data easily.
+</p>
+ <section class="main-section"  id="Rules_for_Variable_names">
+<header><h3>Rules for Variable names</h3></header>
+<ol>
+    <li>Variable names can include letters, digits, $, and _.</li>
+    <li>They must not start with a digit.</li>
+    <li>They cannot be JavaScript reserved keywords (like <code>let</code>, <code>var</code>, <code>function</code> ).</li>
+    <li>Names are case-sensitive (name and Name are different).</li>
+    <li>Use meaningful names that describe the data stored.</li>
+    <li>Spaces and special characters (like @, #, !) are not allowed.</li>
+</ol></section>
+ <section class="main-section" id="Declaring_a_variable"><header> <h3 >Declaring a variable</h3></header>
+            <p>There are three ways to declare a variable. They are as follows :</p>
+            <ol>
+                <li> <code>var </code>-  Old way, function-scoped
+<pre class="vanilla"><code>
+ var name = "Alice";
+
+</code></pre>
+                </li>
+                <li><code>let </code>- Modern way, block-scoped
+<pre class="vanilla"><code>
+ let age = 25;
+
+</code></pre>
+                </li>
+                <li><code>const </code>- Constant value, block-scoped
+<pre class="vanilla"><code>
+ const country = "India";
+
+</code></pre>
+                </li>
+            </ol>
+            <p>In JavaScript, variable names, also identifiers, are used to store data values. 
+</p></section>          <section class="main-section"  id="Determining_variable_type">
+           <header> <h3>Determining variable type</h3></header>
+        <p>To find the data type of the variable :</p>
+<pre class="vanilla"><code>
+ console.log(" The world is not running but ACCELERATING");
+ var a = 5;
+ var b = 6;
+ var c = "Hermione Granger";
+ console.log(a + b + 8);
+ <strong>
+ console.log(typeof a, typeof b, typeof c);</strong>
+</code>
+</pre>
+<p>In browser's Console, <code>number number string</code>  will be displayed.</p></section>
+    </section>
+
+<section class="seven main-section" id="JavaScript_Data_types">
+    <header><h1>JavaScript Data types</h1></header>
+    <p>JavaScript data types define the kind of value a variable can hold. They help the JavaScript engine understand how to store and use the data. Each value in JavaScript belongs to a particular data type. Data types make it easier to perform specific operations on different kinds of values.
+</p> 
+<p>Understanding data types is important for writing correct and bug-free JavaScript code.</p><section class="main-section"  id="Primitive_Data_types">
+ <header><h3>Primitive Data types</h3></header>
+<p>A primitive data type in JavaScript holds a single, simple value and is stored directly in memory.</p>
+<ol>
+<li>Number : 
+<pre class="vanilla"><code>
+  let a = 5;
+
+</code></pre>
+</li>
+<li>String : 
+<pre><code>
+  let name = "Harry";
+
+</code></pre>
+</li>
+<li>Boolean : 
+<pre class="vanilla"><code>
+  let isTrue = true;
+
+</code></pre>
+</li>
+<li>Undefined : 
+<pre class="vanilla"><code>
+  let x; // not assigned yet
+
+</code></pre>
+</li>
+<li>Null : 
+<pre class="vanilla"><code>
+  let y = null;
+
+</code></pre>
+</li>
+<li>BigInt : For very large integers</li>
+<li>Symbol : Unique and immutable values (used for object keys)</li>
+
+
+</ol></section> <section class="main-section" id="Non_Primitive_Data_types">
+<header><h3 >Non Primitive Data types</h3></header>
+<p>A non-primitive data type (also called a reference type) stores a reference to the memory location where the data is kept, not the actual value itself.</p>
+<ol>
+    <li>Objects</li>
+    <li>Arrays</li>
+    <li>Functions</li>
+</ol></section>
+</section>
+    </main>
+
+    <script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const menuList = document.getElementById('menu-list');
+
+  toggleButton.addEventListener('click', () => {
+    menuList.classList.toggle('show-menu');
+  });
+</script>
+
+</body>
+
+</html>
